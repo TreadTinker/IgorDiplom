@@ -310,7 +310,7 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 320px;
-    height: 45%;
+    height: auto;
 }
 .main-title {
     font-family: KIAM;
@@ -320,7 +320,7 @@ a {
     line-height: 110%;
 }
 .section-btn {
-    margin-top: 40px;
+    margin-top: 120px;
 }
 .fill-btn {
     display: inline-flex;
@@ -381,7 +381,7 @@ a {
     display: flex;
     font-size: 18px;
     line-height: 139%;
-    font-weight: 500;
+    font-weight: 700;
 }
 .title-link {
     margin-right: 10px;
@@ -453,4 +453,85 @@ a {
 }
 .services-image-4 {
     background-image: url(../img/prices.svg);
+}
+/*SALES SECTION*/
+.sales-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.sales__container {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.sales-block {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.sales-title {
+    font-size: 35px;
+    line-height: 114%;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.sales-items {
+    display: flex;
+}
+.sales-item {
+    height: auto;
+    flex: 0 0 25%;
+}
+.sales-item-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 245px;
+}
+.sales-item-image{
+    background: 50%/cover no-repeat;
+}
+.sales-item-image::before {
+    padding-bottom: 67%;
+    display: block;
+    width: 100%;
+    content: '';
+}
+.image-1{
+    background-image: url("../img/Kia410h277.jpg");
+}
+.image-2{
+    background-image: url("../img/f90b8f70-22db-4aab-9d41-135c4db43c6e.jpg");
+}
+.sales-item-descr {
+    padding: 30px;
+}
+.descr-title {
+    font-size: 18px;
+    line-height: 139%;
+    font-weight: 700;
+}
+.decr-date {
+    font-size: 15px;
+    line-height: 167%;
+    margin-top: 5px;
+    color: #9ba1a5;
+}
+.descr-subtitle {
+    margin-top: 10px;
+}
+.sales-btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    width: 310px;
+    background-color: transparent;
+    border: 1px solid #05141f;
+    color: #05141f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+.link {
 }

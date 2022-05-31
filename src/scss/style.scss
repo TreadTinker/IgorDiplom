@@ -23,6 +23,7 @@ a {
     position: relative;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .link::after{
     position: absolute;
@@ -132,6 +133,7 @@ a {
 }
 .list-link {
     font-weight: 500;
+    transition: all 1s ease;
 }
 .footer__container {
     padding: 60px 80px;
@@ -365,11 +367,23 @@ a {
 .model-selection__block {
 }
 .block-items {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
-.block-item-card {
+@media (max-width: 1200px) {
+    .block-items{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    
+}
+.block-item-card{
+    transition: all .4s ease;
+}
+.block-item-card:hover {
+    transform: translateY(-10px) scale(110%);
+    transition: all .4s ease;
 }
 .card-image {
 }
@@ -407,11 +421,10 @@ a {
     padding-bottom: 80px;
 }
 .services__container {
-    padding-left: 80px;
     padding-right: 80px;
+    padding-left: 80px;
 }
 .block-links {
-    padding-right: 80px;
     padding-left: 80px;
 }
 .services-title {
@@ -423,8 +436,15 @@ a {
 .block-links-services {
 }
 .services-items {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 1200px) {
+    .services-items{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    
 }
 .services-item {
     height: auto;
@@ -432,12 +452,17 @@ a {
 .services-item-link {
     margin: 0 20px;
     display: flex;
+    width: 80%;
     align-items: center;
     padding: 10px 45px 10px 10px;
     background-color: #d9e1e5;
 }
+.services-item-link:hover{
+    transform: translateY(-10px);
+    transition: all .4s ease;
+}
 .item-image {
-    margin-right: 20px;
+    margin-right: 10px;
     width: 50px;
     height: 50px;
     background: 50%/COVER no-repeat;
@@ -475,6 +500,7 @@ a {
 }
 .sales-items {
     display: flex;
+    gap: 40px;
 }
 .sales-item {
     height: auto;
@@ -533,5 +559,270 @@ a {
     justify-content: center;
     height: 60px;
 }
-.link {
+/*ABOUT SECTION*/
+.about-section {
+    padding: 60px 0 80px;
+}
+.about__container {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+.about-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.about-title {
+}
+.title-text {
+    font-size: 35px;
+    line-height: 114%;
+    font-weight: 700;
+    padding-right: 300px;
+}
+.about-descr {
+}
+@media (max-width: 1200px) {
+    .about-block {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+    }
+}
+.descr-text {
+    font-size: 15px;
+    line-height: 167%;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.descr-subtitle {
+    font-size: 1.5em;
+    text-align: justify;
+}
+.descr-list {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.descr-list-item {
+    
+}
+.list-item-link {
+}
+
+/*POPUP*/
+ 
+  .popup_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(54, 54, 54, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+  }
+  .popup_bg.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+    z-index: 5;
+  }
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #F6F6F5;
+    transform: translate(-50%, -50%) scale(0);
+    width: 746px;
+    height: 518px;
+    transition: 0.5s all;
+    z-index: 3;
+  }
+  .popup.active{
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+    z-index: 4;
+  }
+  .popup-title{
+    margin-top: 64px;
+    margin-bottom: 62px;
+    text-align: center;
+  }
+  .popup-title::before{
+    content: '';
+    position: absolute;
+    background-image: url(/img/popup/graph.svg);
+    width: 155.36px;
+    height: 91.35px;
+    left: 160px;
+    top: 33px;
+  }
+  .close-popup {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 26px;
+    right: 26px;
+    cursor: pointer;
+  }
+  .popup label {
+    margin-left: 113px;
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .popup-title{
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 47px;
+    color: #161616;
+  }
+  .popup .label__text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #161616;
+  }
+  .popup input {
+    margin-top: 10px;
+    width: 521px;
+    height: 40px;
+    background: #FEFEFE;
+    border: 0.5px solid #E4E4E4;
+  }
+  .popup input:focus{
+    background: #FEFEFE;
+    border: 0.5px solid #D8BFA9;
+  }
+  .label__text-under{
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #69766D;
+  }
+  .popup-btn{
+    position: absolute;
+    left: 35%;
+    width: 227px;
+    height: 59px;
+    margin-bottom: 64px;
+  }
+
+
+  /*СCONTACTS SECTION */
+.contancts-section {
+    border-top: 1px solid #cdd0d2;
+}
+.contacts__padding {
+    padding-left: 100px;
+}
+.contacts__container {
+    display: flex;
+}
+.dealer-detail-info {
+    margin-top: 60px;
+    flex: 0 0 50%;
+}
+.page-title {
+    font-size: 50px;
+    line-height: 110%;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.page-subtitle {
+    font-weight: 400;
+}
+.button-callback {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.callback-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 200px;
+    height: 40px;
+    margin-right: 20px;
+    color: #05141f;
+    border: 1px solid #05141f;
+}
+.link-text {
+    color: #05141f;
+}
+.dealer-info-2nd-text {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 30px 0 15px;
+    border-top: 1px solid #cdd0d2;
+}
+.second-text-list {
+    list-style-type: none;
+    flex: 1 1 50%;
+}
+.text-list-item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.text-list-item p {
+    font-size: 14px;
+    line-height: 167%;
+}
+.dealer-info-3rd-text {
+    padding-bottom: 40px;
+    border-top: 1px solid #cdd0d2;
+    padding: 30px 0;
+}
+.third-text-title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+.third-text-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: disc;
+}
+.list-item {
+    margin-bottom: 5px;
+    list-style-type: disc;
+}
+.dealer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+}
+.dealer-button {
+    padding: 0 5px;
+}
+.dealer-button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+    width: 70%;
+    color: #05141f;
+    border: 1px solid #05141f;
+   
+}
+.button-link-text {
+}
+
+.dealer-map {
+    flex: 1 1 50%;
 }

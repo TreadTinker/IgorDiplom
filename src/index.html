@@ -29,9 +29,9 @@
                     <ul class="header__list">
                         <li class="list-item"><a href="#" class="list-link">Главная</a></li>
                         <li class="list-item"><a href="#models" class="list-link">Модельный ряд</a></li>
-                        <li class="list-item"><a href="pages/sales.html" class="list-link">Акции</a></li>
-                        <li class="list-item"><a href="pages/about.html" class="list-link">О Дилере</a></li>
-                        <li class="list-item"><a href="pages/contacts.html" class="list-link">Контакты</a></li>
+                        <li class="list-item"><a href="#sales" class="list-link">Акции</a></li>
+                        <li class="list-item"><a href="#about" class="list-link">О Дилере</a></li>
+                        <li class="list-item"><a href="contacts.html" class="list-link">Контакты</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,13 +159,33 @@
                 </div>
             </section>
             <section class="online-services">
+                <div class="popup_bg">
+                    <form action="" class="popup">
+                      <img class="close-popup" src="img/close.svg" alt="close">
+                      <h3 class="popup-title">Обратный звонок</h3>
+                      <label>
+                        <input type="text" name="name">
+                        <div class="label__text">
+                          *Имя
+                        </div>
+                      </label>
+                      <label>
+                        <input type="tel" name="tel">
+                        <div class="label__text">
+                          *Телефон
+                        </div>
+                    </label>
+                    <label class="label__text-under">*Нажимия кнопку “Оставить заявку” я даю согласие на обработку данных</label>
+                    <button class="main-button_zakaz popup-btn" type="submit"><span class="link">Отправить заявку</span></button>
+                    </form>
+                  </div>
                 <div class="services__container">
                     <div class="block-links">
                         <h2 class="services-title">Онлайн сервисы</h2>
                         <div class="block-links-services">
                             <div class="services-items">
                                 <div class="services-item">
-                                    <a href="" class="services-item-link">
+                                    <a href="" class="services-item-link open-popup">
                                         <span class="item-image services-image-1"></span>
                                         <span>Заказать звонок</span>
                                     </a>
@@ -193,7 +213,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sales-section">
+            <section class="sales-section" id="sales">
                 <div class="sales__container">
                     <div class="sales-block">
                         <h2 class="sales-title">Акции и спецпредложения на автомобили Kia</h2>
@@ -223,6 +243,28 @@
                             <a href="" class="btn">
                                 <span class="sales-btn-text link">Все спецпредложения</span>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section" id="about">
+                <div class="about__container">
+                    <div class="about-block">
+                        <div class="about-title">
+                            <h2 class="title-text">Официальный дилер Киа в Нижнем Новгороде</h2>
+                        </div>
+                        <div class="about-descr">
+                            <p class="descr-text">Автосалон Kia компании "Нижегородец" является официальным дилером Киа в Нижнем Новгороде с 2008г. Серьезная теоретическая подготовка персонала, глубокие знания ассортимента продукции, гарантийной политики, соблюдение правил торговли позволили компании выдержать строгие требования, предъявляемые к дилерам. В автосалоне нашей компании вы непременно отыщете такое авто, которое устроит вас сразу по всем параметрам.</p>
+                            <h3 class="descr-subtitle">Модельный ряд автомобилей KIA</h3>
+                            <p class="descr-text">Достаточно взглянуть на модельный ряд Киа, и последние колебания в выборе нового авто у вас наверняка исчезнут.<br><br>
+                                В наличии представлены следующие модели:</p>
+                            <ul class="descr-list">
+                                <li class="descr-list-item">Компактные хетчбэки - <a href="#" class="list-item-link link">Picanto</a>, <a href="#" class="link">Ceed</a>, <a href="#" class="link">Rio X</a>;</li>
+                                <li class="descr-list-item">Седаны и лифтбэки - <a href="#" class="list-item-link link">Rio</a>, <a href="#" class="link">Cerato</a>, <a href="#" class="link">Stinger</a>, <a href="" class="link">K-5</a>;</li>
+                                <li class="descr-list-item">Универсалы - <a href="#" class="list-item-link link">Ceed SW</a>, <a href="#" class="link">Soul</a>;</li>
+                                <li class="descr-list-item">Кроссоверы и внедорожники - <a href="#" class="list-item-link link">XCeed</a>, <a href="#" class="link">Sorento</a>, <a href="#" class="link">Sportage</a>, <a href="#" class="link">Seltos</a> ;</li>
+                            </ul>
+                            <p class="descr-text">В наших автосалонах потенциальным покупателям предложат не только новые автомобили, а и по-настоящему качественный сервис. Компанией реализуются транспортные средства в различных корпусах и самых востребованных модификаций.</p>
                         </div>
                     </div>
                 </div>
